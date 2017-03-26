@@ -4,10 +4,8 @@ using System.Collections.Generic;
 
 public class CharacterCharacter : MonoBehaviour 
 {
-	
-	public int maxHP;
 	public int currentHP;
-	public int maxXP;
+
 	public int currentXP;
 	public int maxMovesPerTurn;
 	public int movesLeftThisTurn;
@@ -21,6 +19,8 @@ public class CharacterCharacter : MonoBehaviour
 	public Ability[] specialAbilities;
 
 	public ClassSpecifications type; 
+
+	public bool usedAbility;
 
 	public int x;
 	public int y;
@@ -36,6 +36,8 @@ public class CharacterCharacter : MonoBehaviour
 	void Start () 
 	{
 		putOnBoard ();
+		currentHP = type.maximumHealth;
+		usedAbility = false;
 	}
 	
 	// Update is called once per frame
@@ -60,7 +62,7 @@ public class CharacterCharacter : MonoBehaviour
 
 	void damage(int dmg)
 	{
-		currentHP-=dmg;
+		currentHP-=dmg*(100-2*type.defense)/100;
 	}
 
 	public void HighlightMoves()
@@ -70,7 +72,7 @@ public class CharacterCharacter : MonoBehaviour
 		foreach (TileAttributes t in possibleMoves) 
 		{
 			GameObject h = Instantiate (t.map.highlighter.possibleMovesHighlighter);
-			h.transform.parent = t.transform;
+            h.transform.SetParent(t.transform);
 			RectTransform rt = h.GetComponent<RectTransform> ();
 			rt.anchoredPosition = new Vector2 (0,0);
 			this.team.manager.map.highlighter.possibleMoveHighlighters.Add (h);
@@ -87,8 +89,19 @@ public class CharacterCharacter : MonoBehaviour
 		}
 	}
 
+	public void heal(int h)
+	{
+		this.currentHP += h;
+
+		if (currentHP > type.maxXP) 
+		{
+			currentHP = type.maxXP;
+		}
+	}
+
 	public void kill()
 	{
+		team.TeamDamage(this.type.morale); //inflicts damage to team's morale
 		GameObject.Destroy (this.gameObject);
 	}
 }

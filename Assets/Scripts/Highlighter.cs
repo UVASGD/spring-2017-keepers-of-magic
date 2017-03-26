@@ -19,12 +19,19 @@ public class Highlighter : MonoBehaviour {
 	public SelectionMode mode = SelectionMode.PIECE_TO_USE;
 
 	public Stack<TileAttributes> chosenTiles; 
-	public CharacterCharacter chosenCharachter;
+	public CharacterCharacter chosenCharacter;
 
 	public Team currentTeam;
 
 	public GameObject possibleMovesHighlighter;
 	public List<GameObject> possibleMoveHighlighters;
+
+	public GameObject savedAbilitySelectorObject;
+	public GameObject abilitySelectorObject;
+	public AbilitySelector abilitySelector;
+	public Ability abilityInUse;
+
+	public bool mouseIsOverSidebar = false;
 
 	void Awake()
 	{
@@ -36,12 +43,16 @@ public class Highlighter : MonoBehaviour {
 	{
 		chosenTiles = new Stack<TileAttributes> ();
 		possibleMoveHighlighters = new List<GameObject> ();
+		abilitySelectorObject = savedAbilitySelectorObject;
+		abilitySelector = abilitySelectorObject.GetComponent<AbilitySelector> ();
+		currentTeam = map.teams.teams [0];
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (currentTeam.type == Team.PlayerType.human) 
+		if (currentTeam.type == Team.PlayerType.human
+			&& selectedTile != null) 
 		{
 
 			if (Input.GetKey (KeyCode.LeftArrow)) 
@@ -75,6 +86,14 @@ public class Highlighter : MonoBehaviour {
 				downStroke = true;
 			}
 
+			if (selectedTile.containedCharacter != null) 
+			{
+				GameObject.FindGameObjectWithTag ("Character Display").GetComponent<SpriteRenderer>().sprite = selectedTile.containedCharacter.GetComponent<SpriteRenderer>().sprite;
+				GameObject.FindGameObjectWithTag ("Character Display").transform.localScale = new Vector3 (75, 75, 1);
+				GameObject.FindGameObjectWithTag ("Health Indicator").transform.localScale = new Vector3 (11.80754f, 71.82333f*selectedTile.containedCharacter.currentHP/selectedTile.containedCharacter.type.maximumHealth, 85.7285f);
+				GameObject.FindGameObjectWithTag ("Health Indicator").transform.localPosition = new Vector3 (369.7f,17f+72f*selectedTile.containedCharacter.currentHP/selectedTile.containedCharacter.type.maximumHealth,-103);
+			}
+
 			this.executeSelectionModeActions ();
 		}
 	}
@@ -86,7 +105,7 @@ public class Highlighter : MonoBehaviour {
 		{
 			moveInDirection (d);
 			timeOfKeyDown = System.DateTime.UtcNow.Ticks / 10000;
-			downStroke = false;
+			downStroke = false; 
 		}
 		else 
 		{
@@ -132,28 +151,34 @@ public class Highlighter : MonoBehaviour {
 			//For selecting tiles with charachters on them.
 			if (selectedTile.containedCharacter != null && currentTeam.Contains(selectedTile.containedCharacter)) 
 			{
-				//expand over piece.
-				gameObject.transform.localScale = new Vector3 (1.459983f,1.459983f,1f);
+                    //expand over piece.
+                    gameObject.transform.localScale = new Vector3(1f, 1f, 1f);
+                    //gameObject.transform.localScale = new Vector3 (1.459983f,1.459983f,1f);
 
-				//Use Enter key to highlight possible moves
-				if (Input.GetKeyUp (KeyCode.Return) || Input.GetMouseButtonUp(0)) 
+                    //Use Enter key to highlight possible moves
+				if ((Input.GetKeyUp (KeyCode.Return) || Input.GetMouseButtonUp (0)) && selectedTile.containedCharacter.usedAbility == false) 
 				{
-					chosenCharachter = selectedTile.containedCharacter;
+					chosenCharacter = selectedTile.containedCharacter;
+					abilitySelectorObject = GameObject.Instantiate (savedAbilitySelectorObject, new Vector3(0,0,0) /*new Vector3(308, 0, -101)*/, new Quaternion(), map.ui.transform);
+					abilitySelector = abilitySelectorObject.GetComponent<AbilitySelector> ();
+
+
+					//Instantiate(Resources.Load("Panels/Ability Select Panel"));
 					mode = SelectionMode.HIGHLIGHT_POSSIBLE_MOVES;
 				}
-				else if (Input.GetKeyUp (KeyCode.RightShift)) 
-				{
-					chosenCharachter = selectedTile.containedCharacter;
-					mode = SelectionMode.OPEN_ABILITIES_MENU;
-				}
-			} else 
+			} 
+            /*else 
 			{
 				
 				gameObject.transform.localScale = new Vector3 (1f,1f,1f);
-			}
+			}*/
 			break;
 		case SelectionMode.HIGHLIGHT_POSSIBLE_MOVES: //an init state for MOVE_TO_TILE
-			chosenCharachter.HighlightMoves();
+			foreach (GameObject g in possibleMoveHighlighters) 
+			{
+				GameObject.Destroy (g);
+			}
+			chosenCharacter.HighlightMoves();
 			mode = SelectionMode.MOVE_TO_TILE;
 			break;
 		case SelectionMode.MOVE_TO_TILE: 
@@ -161,19 +186,25 @@ public class Highlighter : MonoBehaviour {
 			{
 				if (selectedTile.GetComponentInChildren<RectTransform>() != null)
 				{
-					chosenCharachter.type.movement.Move(selectedTile);
+					chosenCharacter.type.movement.Move(selectedTile);
 				}
 				foreach (GameObject g in possibleMoveHighlighters) 
 				{
 					GameObject.Destroy (g);
 				}
+				Destroy (abilitySelectorObject);
 				mode = SelectionMode.PIECE_TO_USE;
 			}
 			break;
-		case SelectionMode.OPEN_ABILITIES_MENU:
-			mode = SelectionMode.USE_ABILITY;
+		case SelectionMode.USE_ABILITY:
+			abilityInUse.Use();
 			break;
-		case SelectionMode.ABILITY_TARGETS:
+		case SelectionMode.SELECT_TARGETS:
+			abilityInUse.Use ();
+			if (Input.GetKeyUp (KeyCode.Return) || Input.GetMouseButtonUp (0)) 
+			{
+				((CharachterTargeter)abilityInUse).targets.Add (selectedTile);
+			}
 			break;
 		}
 
@@ -202,9 +233,8 @@ public class Highlighter : MonoBehaviour {
 		PIECE_TO_USE,
 		HIGHLIGHT_POSSIBLE_MOVES,
 		MOVE_TO_TILE,
-		OPEN_ABILITIES_MENU,
 		USE_ABILITY,
-		ABILITY_TARGETS,
+		SELECT_TARGETS,
 		INACTIVE
 	}
 }
