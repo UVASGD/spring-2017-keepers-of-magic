@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Ability
+  - Map
+  - UI
+  - Ability Instructions
+  - Ability Selector
+  - Possible Move Highlighters
+  - Character Display
+  - Health Indicator
+  - Morale Bar 1
+  - Morale Bar 2
+  - Morale Text 1
+  - Morale Text 2
   layers:
   - Default
   - TransparentFX
