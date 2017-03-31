@@ -23,7 +23,7 @@ public class ClassSpecifications : MonoBehaviour
 	public int maximumHealth;
 	
 	public int attack;
-	
+
 	public int defense;
 
 	public int maxXP;
