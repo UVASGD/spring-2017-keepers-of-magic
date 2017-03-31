@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   map: {fileID: 0}
-  baseLabel: {fileID: 1665725546461870, guid: 42bf51aa119ea464094d59fdc8c44328, type: 2}
+  baseLabel: {fileID: 1665725546461870, guid: 36c2ae5ed4dab2a4ab74200d5d594c5c, type: 2}
   initialOffset: 0
   offset: 0
 --- !u!114 &114915711849131792
@@ -93,7 +93,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0

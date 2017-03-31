@@ -288,7 +288,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -307,6 +307,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 49415220}
+--- !u!4 &59119443 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 578611388}
 --- !u!4 &60468571 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011675964248, guid: 5aed2c4b508ee664ba18376769ff07ff,
@@ -585,9 +590,9 @@ MonoBehaviour:
   possibleMovesHighlighter: {fileID: 1000011959777198, guid: 2e9db4ce222431e4bbe5a0a6e158e015,
     type: 2}
   possibleMoveHighlighters: []
-  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
-  abilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  abilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
   abilitySelector: {fileID: 0}
   mouseIsOverSidebar: 0
@@ -942,9 +947,9 @@ MonoBehaviour:
   possibleMovesHighlighter: {fileID: 1000011959777198, guid: 2e9db4ce222431e4bbe5a0a6e158e015,
     type: 2}
   possibleMoveHighlighters: []
-  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
-  abilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  abilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
   abilitySelector: {fileID: 0}
   mouseIsOverSidebar: 0
@@ -1292,7 +1297,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b3371fd04b850a745bbd6bb4478d4221, type: 2}
+  - {fileID: 2100000, guid: 1da8ce68972e5014c982b956e47e07d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1511,7 +1516,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: c9efac1c3a0235741a60a7c6cc149833, type: 2}
+  - {fileID: 2100000, guid: 1ab56d0433e01dc4ea71ff720220a521, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1645,48 +1650,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &399905960
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1156761472}
-    m_Modifications:
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.5009027
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.2550229
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-  m_IsPrefabParent: 0
 --- !u!4 &400560506 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4000011675964248, guid: 5aed2c4b508ee664ba18376769ff07ff,
@@ -1898,7 +1861,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
@@ -2198,6 +2161,48 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &578611388
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1156761472}
+    m_Modifications:
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.5009027
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.2550229
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &610353735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2895,48 +2900,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011675964248, guid: 5aed2c4b508ee664ba18376769ff07ff,
     type: 2}
   m_PrefabInternal: {fileID: 904708929}
---- !u!1001 &757581646
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1532853446}
-    m_Modifications:
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1.5009027
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.2550229
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: d9b17e2f2970819429b98d6b89045ad1, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &825524319
 GameObject:
   m_ObjectHideFlags: 0
@@ -2994,9 +2957,9 @@ MonoBehaviour:
   possibleMovesHighlighter: {fileID: 1000011959777198, guid: 2e9db4ce222431e4bbe5a0a6e158e015,
     type: 2}
   possibleMoveHighlighters: []
-  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
-  abilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  abilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
   abilitySelector: {fileID: 0}
   mouseIsOverSidebar: 0
@@ -3014,7 +2977,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8b6e866dcb17b624e92b090ba85d4fe5, type: 2}
+  - {fileID: 2100000, guid: 46c3600778ff6584791da0ec307987b0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3466,7 +3429,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: ab2985f07879bee49a6a52c2e3c84d3a, type: 2}
+  - {fileID: 2100000, guid: e2fcfa4ab30770f4b92b5e5998d5bebe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3885,11 +3848,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 48
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -4000,6 +3963,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4000011675964248, guid: 5aed2c4b508ee664ba18376769ff07ff,
     type: 2}
   m_PrefabInternal: {fileID: 1039276707}
+--- !u!4 &1090757402 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1823050159}
 --- !u!1001 &1109093078
 Prefab:
   m_ObjectHideFlags: 0
@@ -4162,7 +4130,7 @@ Transform:
   m_LocalPosition: {x: -0.3809984, y: 0.01602099, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1372870962}
+  - {fileID: 59119443}
   - {fileID: 207396531}
   m_Father: {fileID: 323324380}
   m_RootOrder: 0
@@ -4198,11 +4166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   map: {fileID: 0}
   teams: []
---- !u!4 &1177113358 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1,
-    type: 2}
-  m_PrefabInternal: {fileID: 757581646}
 --- !u!1 &1180169611
 GameObject:
   m_ObjectHideFlags: 0
@@ -4304,6 +4267,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   nextLevel: {fileID: 0}
   maximumHealth: 14
+  attack: 0
   defense: 0
   maxXP: 55
   morale: 100
@@ -4362,7 +4326,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 48
     m_FontStyle: 0
     m_BestFit: 0
@@ -4441,7 +4405,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -4453,7 +4417,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Team 1: 100/100'
+  m_Text: 'Team 1:100/100
+
+'
 --- !u!222 &1202299013
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4514,7 +4480,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b3371fd04b850a745bbd6bb4478d4221, type: 2}
+  - {fileID: 2100000, guid: 1da8ce68972e5014c982b956e47e07d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4655,9 +4621,9 @@ MonoBehaviour:
   possibleMovesHighlighter: {fileID: 1000011959777198, guid: 2e9db4ce222431e4bbe5a0a6e158e015,
     type: 2}
   possibleMoveHighlighters: []
-  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
-  abilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  abilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
   abilitySelector: {fileID: 0}
   mouseIsOverSidebar: 0
@@ -5153,7 +5119,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 35f87e0c5088a96429d5f19f00c829fd, type: 2}
+  - {fileID: 2100000, guid: 66f11ab87b6b2ca4e841a5a0e50b12ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5191,11 +5157,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1365990606}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1372870962 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4194052188242560, guid: d9b17e2f2970819429b98d6b89045ad1,
-    type: 2}
-  m_PrefabInternal: {fileID: 399905960}
 --- !u!1001 &1390847729
 Prefab:
   m_ObjectHideFlags: 0
@@ -5372,7 +5333,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
@@ -5492,7 +5453,7 @@ Transform:
   m_LocalPosition: {x: -0.3809984, y: 0.01602099, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1177113358}
+  - {fileID: 1090757402}
   - {fileID: 1180169612}
   m_Father: {fileID: 1726253724}
   m_RootOrder: 0
@@ -5512,6 +5473,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   nextLevel: {fileID: 0}
   maximumHealth: 14
+  attack: 0
   defense: 0
   maxXP: 55
   morale: 100
@@ -5745,7 +5707,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 35f87e0c5088a96429d5f19f00c829fd, type: 2}
+  - {fileID: 2100000, guid: 66f11ab87b6b2ca4e841a5a0e50b12ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6101,7 +6063,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
@@ -6184,7 +6146,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 35f87e0c5088a96429d5f19f00c829fd, type: 2}
+  - {fileID: 2100000, guid: 66f11ab87b6b2ca4e841a5a0e50b12ad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6393,6 +6355,48 @@ Transform:
   m_Father: {fileID: 691831152}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1823050159
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1532853446}
+    m_Modifications:
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -1.5009029
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.255023
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4194052188242560, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 957c0801b6fe2a449a961f4532959b7b, type: 2}
+  m_IsPrefabParent: 0
 --- !u!4 &1832463333
 Transform:
   m_ObjectHideFlags: 0
@@ -6666,7 +6670,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: b3371fd04b850a745bbd6bb4478d4221, type: 2}
+  - {fileID: 2100000, guid: 1da8ce68972e5014c982b956e47e07d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6908,9 +6912,9 @@ MonoBehaviour:
   possibleMovesHighlighter: {fileID: 1000011959777198, guid: 2e9db4ce222431e4bbe5a0a6e158e015,
     type: 2}
   possibleMoveHighlighters: []
-  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
-  abilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  abilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
   abilitySelector: {fileID: 0}
   mouseIsOverSidebar: 0
@@ -7286,9 +7290,9 @@ MonoBehaviour:
   possibleMovesHighlighter: {fileID: 1000011959777198, guid: 2e9db4ce222431e4bbe5a0a6e158e015,
     type: 2}
   possibleMoveHighlighters: []
-  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  savedAbilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
-  abilitySelectorObject: {fileID: 1700954738321890, guid: 059cad5713392774a93b16e5789b7a1d,
+  abilitySelectorObject: {fileID: 1700954738321890, guid: 1456d02f6a27186439a6d1d9ed30e456,
     type: 2}
   abilitySelector: {fileID: 0}
   mouseIsOverSidebar: 0
@@ -7642,7 +7646,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -7807,7 +7811,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 008f226efb827434782bf4fe180c33e7, type: 3}
+    m_Font: {fileID: 12800000, guid: b2a6e2b6fee804e49bd2fb97c8dd0920, type: 3}
     m_FontSize: 11
     m_FontStyle: 0
     m_BestFit: 0
