@@ -18,6 +18,7 @@ public class TileAttributes : MonoBehaviour {
 
 	/**The charachter occupying the space*/
 	public CharacterCharacter containedCharacter;
+	public List<TileEffect> tileEffects;
 
 	public int x;
 	public int y;
@@ -26,12 +27,13 @@ public class TileAttributes : MonoBehaviour {
 	{
 		//find and set the map parent.
 		map = this.GetComponentInParent<TileArrangement> ();
+		
+		tileEffects=new List<TileEffect>();
 	}
 
 	// Use this for initialization
 	void Start () 
-	{
-		
+	{		
 	}
 	
 	// Update is called once per frame
@@ -64,7 +66,7 @@ public class TileAttributes : MonoBehaviour {
 		
 	}
 
-	public bool spaceIsOdccupied()
+	public bool spaceIsOccupied()
 	{
 		return (containedCharacter != null);
 	}
@@ -76,6 +78,11 @@ public class TileAttributes : MonoBehaviour {
 		hills,
 		mountains,
 		water,
-		trees
+		trees,
+		bridge,
+		brokenBridge,
+		breakableBridge,
+		impassable,
+		stone,	
 	};
 }

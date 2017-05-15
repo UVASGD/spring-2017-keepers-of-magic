@@ -3,37 +3,51 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class Kaiyufication : Ability {
-
-	public string name = "Kaiyufication";
-	public string description;
+	public TileArrangement map;
+	public ClassSpecifications specs;
 	// Use this for initialization
-	public void Start () 
+	public override void Start () 
 	{
-	
+		name = "Kaiyufication";	
+		map = GameObject.FindGameObjectWithTag ("Map").GetComponent<TileArrangement>();
+		specs = GetComponentInParent<ClassSpecifications> ();
 	}
 	
 	// Update is called once per frame
-	public void Update () {
+	public override void Update () {
 	
 	}
 
-	public string GetName()
+	public override string GetName()
 	{
 		return name;
 	}
 
-	public string GetDescription()
+	public override string GetDescription()
 	{
 		return description;
 	}
 
-	public void Use()
+	public override void Use()
 	{
-		/*TileAttributes tileTarget = ts [0];
-		if (tileTarget.containedCharacter != null) 
+		foreach (Team t in map.teams.teams) 
 		{
-			CharacterCharacter attackedCharachter = tileTarget.containedCharacter;
-			attackedCharachter.name = "Kaiyu"; //Caillou
-		}*/
+			if (t != specs.owner.team) 
+			{
+				foreach (CharacterCharacter c in t.pieces) 
+				{
+					c.activeEffects.Add (new Kaiyufied (c));
+				}
+			}
+		}
+		map.highlighter.mode = Highlighter.SelectionMode.PIECE_TO_USE;
+		specs.owner.usedAbility = true;
+		cooldownTimer=cooldown;
 	}
+	
+	public override void AIUse(CharacterCharacter target)
+	{
+		this.Use();
+	}
+	
 }

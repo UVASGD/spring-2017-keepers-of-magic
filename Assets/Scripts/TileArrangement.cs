@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class TileArrangement : MonoBehaviour 
 {
 	/**The 1d array of all tiles. Used temporarily.*/
-	TileAttributes[] tiles;
+	public TileAttributes[] tiles;
 
 	/**The 2d array of all tiles. Set up on Awake().*/
 	public TileAttributes[,] tileMap;
@@ -16,7 +16,13 @@ public class TileArrangement : MonoBehaviour
 	/**The thing that selects and highlights tiles.*/
 	public Highlighter highlighter;
 
+	public List<Animation> runningAnimations;
+
 	public GameObject ui;
+	
+	/** Used for ability label: using the map to store its initial position**/
+	//public Vector2 uiCameraPosition;
+	//public float uiCameraSize;
 
 	//The lowest and highest positions of the physical tiles.
 	int lowX = 0;
@@ -34,11 +40,17 @@ public class TileArrangement : MonoBehaviour
 		highlighter = this.GetComponentInChildren<Highlighter> ();
 		//get the teams.
 		teams = this.GetComponentInChildren<TeamManager> ();
+
+		runningAnimations = new List<Animation> ();
 	}
 
 	// Use this for initialization
 	void Start () 
 	{
+		/**for abilityselector retrieval
+		//uiCameraPosition=GameObject.Find("UI Camera").transform.position;
+		//uiCameraSize=GameObject.Find("UI Camera").GetComponent<Camera>().orthographicSize;
+		**/
 		//start the highlighter somewhere. TODO: make the highlighter start constantly at the bottom leftmost corner.
 		//we currently use tiles[0] for this only because tileMap[0,0] would risk a null entry.
 		highlighter.selectedTile = tiles[0];
@@ -51,7 +63,7 @@ public class TileArrangement : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		
+		RunAnimations ();
 	}
 
 	/**A method to make and return a 2d array of tiles.
@@ -139,6 +151,8 @@ public class TileArrangement : MonoBehaviour
 		}
 
 		//now, put the charachters on the map.
+		
+		/*
 		TeamManager ts = this.GetComponentInChildren<TeamManager>();
 		foreach (Team t in ts.teams) 
 		{
@@ -147,7 +161,8 @@ public class TileArrangement : MonoBehaviour
 				c.putOnBoard ();
 			}
 		}
-
+		*/
+		
 		//return the 2d map.
 		return tileMap;
 	}
@@ -177,6 +192,58 @@ public class TileArrangement : MonoBehaviour
 	public int HighY {
 		get {
 			return highY;
+		}
+	}
+
+	public void RunAnimations ()
+	{
+		List<Animation> toRemove = new List<Animation>();
+		List<Animation> toAdd = new List<Animation>();
+
+		foreach (Animation a in runningAnimations) 
+		{
+			if (a.IsFinished ()) 
+			{
+				a.OnFinish ();
+				foreach (Animation n in a.endTriggers) 
+				{
+					toAdd.Add (n);
+				}
+				toRemove.Add (a);
+			}
+			else 
+			{
+				if (!a.initialized) 
+				{
+					a.Init ();
+				}
+				a.Action ();
+			}
+		}
+		foreach (Animation r in toRemove) 
+		{
+			runningAnimations.Remove (r);
+		}
+		foreach (Animation d in toAdd) 
+		{
+			runningAnimations.Add (d);
+		}
+	}
+
+	public void AddAnimation(Animation a)
+	{
+		runningAnimations.Add (a);
+	}
+
+	public void AddAnimationSequence (List<Animation> l)
+	{
+		if (l.Count>0) 
+		{
+			AddAnimation (l [0]);
+		}
+		for (int i = 1; i < l.Count; i++) 
+		{
+			l[i-1].AddEndTrigger(l[i]);
 		}
 	}
 }
