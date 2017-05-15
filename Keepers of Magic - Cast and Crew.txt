@@ -1,0 +1,30 @@
+Director
+	Michael Ritzo
+	Ryan Ritzo (2)
+
+Programmers - * denotes head programmer
+	Paul Arthaud *
+	Michael Klaczynski 
+	Ryan Ritzo (1)
+	Clayton Smith * (1)
+	Kenneth Le (2)
+Design
+	Spencer Plutchak
+	Kevin Roddy (1)
+	Dylan Nguyen(2)
+
+Sound
+	Joseph Kim (1)
+	Spencer Plutchak
+
+Art
+	Annie Vu
+
+Writing
+	
+	Brittany Crow (1)
+	Michael Ritzo (1)
+	Yifei Yang
+
+(1) denotes member during Fall semester
+(2) denotes member during Spring semester

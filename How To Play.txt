@@ -1,0 +1,16 @@
+Controls:
+
+Move Camera: WASD
+Select Unit: Left Click
+Move Unit: Left Click highlighted tile
+Attack: Left Click ability from Character Menu, then Left Click target
+
+Note: On the bridge map, slightly green tinted tiles can be destroyed with an ability.
+
+Game ends when Team Morale reaches zero. 
+
+Plot:
+
+Enter a mysterious land of Aldernia where, armed with the magical Relics of Harmony, sorcerers  known as Keepers have kept the peace in the land for the last 100 years. Play as Xander, an unlikely hero, who served as the last Keeper's bodyguard in his quest to bring order to the land after her untimely death and the subsequent theft of the Relics of Harmony. Recover the Relics and decide what to do with them; the fate of Aldernia within your hands.
+
+Keepers of Magic is a stragetic turned based RPG similar to the series Fire Emblem with different classes ranging from a thief to an alchemist. Keepers of Magic has a story mode where the story summary is shown above as well as a multiplayer mode so that players can fully experience the range of maps, classes and features that the game has to offer.  
